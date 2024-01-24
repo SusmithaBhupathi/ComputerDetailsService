@@ -60,7 +60,7 @@ public class ComputerDetailsService {
 			computer.setEmployee(employee);
 		}
 		else {
-			Employee emp = employeeDetailsRepository.findByAbberivation(info.getAbberivation());
+			 Employee emp = employeeDetailsRepository.findByAbberivation(info.getAbberivation());
 			computer.setEmployee(emp);
 			if(repository.findByEmployee(emp).size()>=2) {
 				String url = "http://localhost:8081/api/notify";
